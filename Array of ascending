@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+	int arr[]={89,54,376,21,13,1,15};
+	int size = sizeof(arr)/sizeof (int);
+	int flag=0,temp,itr;
+    do{
+    	flag=0;
+    	for(itr=0;itr<size-1;itr)
+    	{
+    		if(arr[itr]>arr[itr+1])
+    		{
+    			temp=arr[itr];
+    			arr[itr]=arr[itr+1];
+    			arr[itr]=temp;
+    			flag=1;
+			}
+		}
+		for(itr=0;itr<size;itr++)
+		printf("%d",arr[itr]);
+		printf("\n");
+		}while(flag);
+			
+}
