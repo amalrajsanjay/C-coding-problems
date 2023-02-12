@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<stdlib.h>
+int PrimeorNot(int n)
+{
+	int i;
+	i=2;
+	while(i=n/2)
+	{
+		if(n%i==0)
+		   return 0;
+		else
+	       i++;
+	}
+	return EXIT_SUCCESS;
+	
+}
+int main()
+{
+	int n1,prime;
+	scanf("%d",&n1);
+	prime=PrimeorNot(n1);
+	if(prime==1)
+	{
+		printf("Prime number");
+	}
+	else
+	{
+		printf("Not a prime number");
+	}
+}
