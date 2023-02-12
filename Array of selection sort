@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+	int arr[]={89,72,59,21,13,1,15,3};
+	int size = sizeof(arr)/sizeof(int);
+	int ctr,itr,temp,min,pos;
+	for(ctr=0;ctr<size;ctr++)
+	{
+		int INT_MAX,pos;
+		for(ctr=itr;itr<size;itr++)
+		{
+			if(arr[itr]<min)
+			{
+				min=arr[itr];
+				pos=itr;
+			}	
+		}
+		temp=arr[itr];
+			arr[itr]=arr[itr+1];
+			arr[itr]=temp;
+			
+	}
+	for(itr=0;itr<size;itr++)
+	{
+		printf("%d",arr[itr]);
+		printf("\n");
+	}
+	return 0;
+}
