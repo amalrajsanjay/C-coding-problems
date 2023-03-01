@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+void sum_of_rightside_ele(int n,long long int arr[])
+{ 
+   long long sum=0;
+   long long int i;
+   for(i=0;i<n;i++)
+     sum=sum+arr[i];
+   for(int i=0;i<n;i++){
+     arr[i]=sum-arr[i];
+     sum=arr[i];
+   } 
+   for(int i=0;i<n;i++){
+     cout<<arr[i]<<" ";
+   }
+    
+}
+int main()
+{
+int no_ele,index;
+cin>>no_ele;
+long long int arr[no_ele];
+for(index=0;index<no_ele;index++)
+cin>>arr[index];
+sum_of_rightside_ele(no_ele,arr);
+return 0;
+}
