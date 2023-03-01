@@ -1,0 +1,12 @@
+class Solution{
+public:	
+	// swap k'th element from beginning and end
+	void swapKth(int *arr, int n, int k) {
+	    int start=k-1;
+	    int end=n-k;
+	    int temp;
+	    temp=arr[start];
+	    arr[start]=arr[end];
+	    arr[end]=temp;
+	}
+};
